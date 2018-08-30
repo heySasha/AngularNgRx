@@ -1,6 +1,6 @@
 export function reducer(state, action) {
     switch (action.type) {
-        case 'TOGGLE_MASK_USER_NAME':
+        case 'MASK_USER_NAME':
             console.log(action);
 
             return {

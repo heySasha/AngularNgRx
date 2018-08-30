@@ -22,11 +22,9 @@ export class LoginComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.store.pipe(select('login')).subscribe(login => {
-            console.log(login);
-
-            if (login) {
-                this.maskUserName = login.maskUserName;
+        this.store.pipe(select('users')).subscribe(users => {
+            if (users) {
+                this.maskUserName = users.maskUserName;
             }
         });
     }
@@ -37,7 +35,7 @@ export class LoginComponent implements OnInit {
 
     checkChanged(value: boolean): void {
         this.store.dispatch({
-            type: 'TOGGLE_MASK_USER_NAME',
+            type: 'MASK_USER_NAME',
             payload: value
         });
     }

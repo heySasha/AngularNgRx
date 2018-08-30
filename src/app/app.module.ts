@@ -19,21 +19,21 @@ import { PageNotFoundComponent } from './home/page-not-found.component';
 import { UserModule } from './user/user.module';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(ProductData),
-    UserModule,
-    AppRoutingModule,
-    StoreModule.forRoot({})
-  ],
-  declarations: [
-    AppComponent,
-    ShellComponent,
-    MenuComponent,
-    WelcomeComponent,
-    PageNotFoundComponent
-  ],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        HttpClientInMemoryWebApiModule.forRoot(ProductData),
+        UserModule,
+        AppRoutingModule,
+        StoreModule.forRoot({})
+    ],
+    declarations: [
+        AppComponent,
+        ShellComponent,
+        MenuComponent,
+        WelcomeComponent,
+        PageNotFoundComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

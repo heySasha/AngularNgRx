@@ -25,9 +25,9 @@ export class LoginComponent implements OnInit {
         this.store.pipe(select('login')).subscribe(login => {
             console.log(login);
 
-           if (login) {
-               this.maskUserName = login.maskUserName;
-           }
+            if (login) {
+                this.maskUserName = login.maskUserName;
+            }
         });
     }
 
